@@ -26,16 +26,14 @@ class Sorter {
   }
 
   sort(indices) {
-    let mas2 = [];
+    let tempArr = [];
     indices.sort();
-    
     for (let i = 0; i < indices.length; i++) {
-        mas2.push(this.arr[indices[i]]);
+        tempArr.push(this.arr[indices[i]]);
     }
-    mas2.sort(this.comparator);
-    
+    tempArr.sort(this.comparator);
     for(let i = 0; i < indices.length; i++) {
-        this.arr[indices[i]] = mas2[i];
+        this.arr[indices[i]] = tempArr[i];
     }
   }
 
